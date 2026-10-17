@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090910">
+  <title>LaColima — Next Generation</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #090910;
+      --panel: #12121d;
+      --purple: #9b5cff;
+      --pink: #e15cff;
+      --text: #f6f3ff;
+      --muted: #a29bb5;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at 50% 0%, #42216b55, transparent 55%),
+        var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      border-bottom: 1px solid #ffffff12;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: var(--purple);
+    }
+
+    .status {
+      color: #b6ffcb;
+      font-size: 12px;
+      background: #163322;
+      border: 1px solid #28563a;
+      padding: 7px 12px;
+      border-radius: 30px;
+    }
+
+    main {
+      width: min(100% - 36px, 900px);
+      margin: auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 0 65px;
+    }
+
+    .tag {
+      display: inline-block;
+      color: #d5baff;
+      border: 1px solid #9b5cff55;
+      background: #9b5cff12;
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 26px;
+    }
+
+    h1 {
+      font-size: clamp(43px, 9vw, 82px);
+      line-height: 1.05;
+      letter-spacing: -4px;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      background: linear-gradient(100deg, #a875ff, #ed79ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 510px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      border: 1px solid #ffffff20;
+      border-radius: 12px;
+      padding: 14px 22px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: .2s;
+    }
+
+    .primary {
+      background: linear-gradient(100deg, #8747f5, #bd56eb);
+      color: white;
+      border: none;
+    }
+
+    .secondary {
+      color: white;
+      background: #ffffff08;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.15);
+    }
+
+    .section-title {
+      font-size: 23px;
+      margin-bottom: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 65px;
+    }
+
+    .card {
+      padding: 23px 18px;
+      border: 1px solid #ffffff12;
+      border-radius: 17px;
+      background: linear-gradient(145deg, #191725, #101019);
+    }
+
+    .card .emoji {
+      font-size: 27px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      font-size: 15px;
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .join {
+      text-align: center;
+      border: 1px solid #9b5cff30;
+      border-radius: 22px;
+      background: linear-gradient(130deg, #6d35a722, #c34ddd0c);
+      padding: 38px 20px;
+      margin-bottom: 55px;
+    }
+
+    .join h2 {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .join p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 23px;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid #ffffff12;
+      padding: 24px 15px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 19px 20px; }
+      .hero { padding-top: 75px; }
+      h1 { letter-spacing: -2px; }
+      .cards { grid-template-columns: 1fr; }
+      .card { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">La<span>Colima</span></div>
+    <div class="status">● En développement</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="tag">✦ UNE NOUVELLE EXPÉRIENCE</div>
+      <h1>Bienvenue chez<br><span>LaColima.</span></h1>
+      <p>
+        Un nouvel espace, une nouvelle vision.
+        Découvre notre univers et rejoins l'aventure.
+        La suite commence ici.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#decouvrir">Découvrir le projet ↗</a>
+        <a class="btn secondary" href="#communaute">Notre communauté</a>
+      </div>
+    </section>
+
+    <section id="decouvrir">
+      <h2 class="section-title">L'univers LaColima</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="emoji">⚡</div>
+          <h3>Rapide & moderne</h3>
+          <p>Une interface pensée pour être simple, fluide et agréable sur téléphone.</p>
+        </article>
+        <article class="card">
+          <div class="emoji">🌌</div>
+          <h3>Un univers unique</h3>
+          <p>Un design sombre avec une identité visuelle violette et lumineuse.</p>
+        </article>
+        <article class="card">
+          <div class="emoji">🚀</div>
+          <h3>En évolution</h3>
+          <p>Une base prête à accueillir les prochaines fonctionnalités du projet.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="join" id="communaute">
+      <h2>La suite se construit ensemble.</h2>
+      <p>
+        LaColima est en cours de création.<br>
+        De nouvelles fonctionnalités arriveront prochainement.
+      </p>
+      <a class="btn primary" href="#decouvrir">Explorer le site ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 LaColima · Un projet en construction
+  </footer>
+</body>
+</html>
